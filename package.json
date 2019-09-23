@@ -1,31 +1,29 @@
 {
-  "name": "pandemic-mustache",
-  "version": "0.3.0",
-  "description": "Wrapper to use mustache as a pandemic preprocessing hook",
+  "name": "pandemic-include",
+  "version": "0.1.0",
+  "description": "Wrapper to use mdinclude as a pandemic preprocessing hook",
   "main": "index.js",
   "bin": {
-    "pandemic-mustache": "./index.js"
+    "pandemic-include": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lionel-rigoux/pandemic-mustache.git"
+    "url": "git+https://github.com/lionel-rigoux/pandemic-include.git"
   },
   "keywords": [
     "pandemic",
-    "mustache"
+    "include"
   ],
   "author": "Lionel Rigoux",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/lionel-rigoux/pandemic-mustache/issues"
+    "url": "https://github.com/lionel-rigoux/pandemic-include/issues"
   },
-  "homepage": "https://github.com/lionel-rigoux/pandemic-mustache#readme",
+  "homepage": "https://github.com/lionel-rigoux/pandemic-include#readme",
   "dependencies": {
-    "js-yaml": "^3.12.0",
-    "mustache": "^3.0.1",
-    "yaml-front-matter": "^4.0.0"
+    "mdinclude": "^0.7.1"
   }
 }

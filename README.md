@@ -1,31 +1,33 @@
-# pandemic-mustache
+# pandemic-include
 
-Wrapper to apply mustache templating to your manuscript in pandemic.
+Wrapper of ![mdinclude](https://www.npmjs.com/package/mdinclude) for Pandemic.
+Allows to include markdown, text, or csv file directly in your manuscript.
 
 ## Usage
 
-```sh
-cat my_document > pandemic-mustache [view1.json] [view2.json] [...]
+The best would be to check mdinclude doc, but for a quick preview:
+
+### Include other markdown document:
+```markdown
+<!-- #include chapters/one.md -->
 ```
 
-Where the arguments are .json or .yaml files that contain the 'views' (ie. the name/values association to replace in the template).
-
-If no arguments are given, pandemic-mustache will look in the front matter of the document provided on stdin:
-
-```yaml
----
-mustache: results.json
----
+Note that you can also use jockers:
+```markdown
+<!-- #include chapters/*.md -->
 ```
 
-or
-
-```yaml
----
-mustache:
-- results/res1.json
-- results/res2.yaml
----
+### Include csv file (will be converted to Markdown table, neat!):
+```markdown
+<!-- #csv data/values.csv -->
 ```
 
-In the case of multiple files, each file is used in turn to fill in the mustache place holders in your document. Therefore, if a value if defined in multiple files, only the first occurrence will be used in the template and no error will be thrown.
+### Include source code:
+```Markdown
+<!-- #code example.js -->
+```
+
+### Include as citation (prefixed with `>`):
+```markdown
+<!-- #cite quotes/einstein.txt -->
+```
