@@ -6,8 +6,6 @@ const mdinclude = require ('mdinclude');
 // read from stdin
 var content = fs.readFileSync (0, 'utf8');
 
-console.log(process.cwd());
-
 content = mdinclude (
   content,
   {
